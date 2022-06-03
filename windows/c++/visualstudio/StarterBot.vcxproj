@@ -11,16 +11,41 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\src\auxFun.h" />
+    <ClInclude Include="..\src\BuildManager.h" />
+    <ClInclude Include="..\src\CommMngr.h" />
+    <ClInclude Include="..\src\ExampleAIModule.h" />
+    <ClInclude Include="..\src\FileIO.h" />
     <ClInclude Include="..\src\Grid.hpp" />
     <ClInclude Include="..\src\MapTools.h" />
+    <ClInclude Include="..\src\ProductionManager.h" />
     <ClInclude Include="..\src\StarterBot.h" />
+    <ClInclude Include="..\src\TaskEngine.h" />
+    <ClInclude Include="..\src\TaskFun.h" />
     <ClInclude Include="..\src\Tools.h" />
+    <ClInclude Include="..\src\UnitFun.h" />
+    <ClInclude Include="..\src\UserInterface.h" />
+    <ClInclude Include="..\src\Walker.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\auxFun.cpp" />
+    <ClCompile Include="..\src\BuildManager.cpp" />
+    <ClCompile Include="..\src\CommMngr.cpp" />
+    <ClCompile Include="..\src\ExampleAIModule.cpp" />
+    <ClCompile Include="..\src\FileIO.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\MapTools.cpp" />
+    <ClCompile Include="..\src\ProductionManager.cpp" />
     <ClCompile Include="..\src\StarterBot.cpp" />
+    <ClCompile Include="..\src\TaskEngine.cpp" />
+    <ClCompile Include="..\src\TaskFun.cpp" />
     <ClCompile Include="..\src\Tools.cpp" />
+    <ClCompile Include="..\src\UnitFun.cpp" />
+    <ClCompile Include="..\src\UserInterface.cpp" />
+    <ClCompile Include="..\src\Walker.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\README.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectName>StarterBot</ProjectName>
