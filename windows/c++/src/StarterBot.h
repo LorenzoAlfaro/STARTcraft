@@ -1,7 +1,7 @@
 #pragma once
 
 #include "MapTools.h"
-
+#include "Walker.h"
 #include <BWAPI.h>
 
 class StarterBot
@@ -30,4 +30,9 @@ public:
 	void onUnitShow(BWAPI::Unit unit);
 	void onUnitHide(BWAPI::Unit unit);
 	void onUnitRenegade(BWAPI::Unit unit);
+
+	int callBack = 0;
+	Unit JimRaynor;
+	list<TilePosition>  Unexplored; //Walkable options
+	list<int> deadUnits;
 };

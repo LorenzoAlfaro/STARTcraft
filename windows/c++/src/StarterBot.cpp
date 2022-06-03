@@ -10,6 +10,12 @@ StarterBot::StarterBot()
 // Called when the bot starts!
 void StarterBot::onStart()
 {
+    list<Unit> raynors = UnitFun::getUnitList(Hero_Jim_Raynor_Marine, Broodwar->self()->getUnits(), deadUnits);
+
+    if (raynors.size() > 0)
+    {
+        JimRaynor = raynors.front();
+    }
     // Set our BWAPI options here    
 	BWAPI::Broodwar->setLocalSpeed(10);
     BWAPI::Broodwar->setFrameSkip(0);
@@ -30,23 +36,26 @@ void StarterBot::onEnd(bool isWinner)
 // Called on each frame of the game
 void StarterBot::onFrame()
 {
+    const int frameCount = Broodwar->getFrameCount();
+    // Custom Walker
+    Walker::Walk(JimRaynor, true, frameCount, callBack, Unexplored);
     // Update our MapTools information
     m_mapTools.onFrame();
 
     // Send our idle workers to mine minerals so they don't just stand there
-    sendIdleWorkersToMinerals();
+    //sendIdleWorkersToMinerals();
 
     // Train more workers so we can gather more income
-    trainAdditionalWorkers();
+    //trainAdditionalWorkers();
 
     // Build more supply if we are going to run out soon
-    buildAdditionalSupply();
+    //buildAdditionalSupply();
 
     // Draw unit health bars, which brood war unfortunately does not do
     Tools::DrawUnitHealthBars();
 
     // Draw some relevent information to the screen to help us debug the bot
-    drawDebugInformation();
+    //drawDebugInformation();
 }
 
 // Send our idle workers to mine minerals so they don't just stand there

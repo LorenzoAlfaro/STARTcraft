@@ -1,4 +1,4 @@
-windows/bin
+windows/bin/*.exe
 windows/c++/visualstudio/Release
 windows/c++/visualstudio/Debug
 windows/c++/visualstudio/.vs
